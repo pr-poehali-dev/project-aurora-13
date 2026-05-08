@@ -1,4 +1,5 @@
-import { Compass, Lock, Sparkles, ShieldCheck, Wallet, Leaf, Plus, Minus, Mail } from "lucide-react"
+import { Globe, Heart, Sparkles, ShieldCheck, Leaf, Camera, Plus, Minus, Mail } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 
@@ -16,24 +17,24 @@ const Index = () => {
 
   const faqs: FAQ[] = [
     {
-      question: "Насколько физически сложен этот тур?",
+      question: "Животные из каких стран живут в зоопарке?",
       answer:
-        "Экспедиция в Скрытую Долину требует отличной физической подготовки. Вам предстоит пройти более 15 км по джунглям, спуститься по веревке с 80-метровой высоты и преодолеть подземные реки. Участники должны быть готовы нести рюкзак весом 15 кг и иметь опыт спелеологии или треккинга.",
+        "В нашем зоопарке представлены животные с шести континентов: слоны и жирафы из Африки, тигры и панды из Азии, ягуары и ленивцы из Южной Америки, белые медведи из Арктики, кенгуру и коалы из Австралии, а также редкие птицы Европы. Всего более 200 видов.",
     },
     {
-      question: "Что входит в стоимость тура?",
+      question: "Как долго длится посещение зоопарка?",
       answer:
-        "В стоимость экспедиции включены все разрешения, профессиональные гиды, снаряжение для безопасности, палаточное оборудование, питание на маршруте, трансфер от базового лагеря и страховка экстренной эвакуации. Личные вещи, такие как одежда и средства гигиены, не включены.",
+        "Для комфортного знакомства со всеми экспозициями рекомендуем закладывать 3–4 часа. Если вы планируете посетить кормления, мастер-классы и интерактивные программы — лучше провести у нас целый день. Зоопарк работает с 9:00 до 20:00 без выходных.",
     },
     {
-      question: "Безопасно ли исследовать пещеру Скрытой Долины?",
+      question: "Можно ли покормить животных?",
       answer:
-        "Безопасность — наш абсолютный приоритет. Все гиды — сертифицированные спасатели-спелеологи, мы используем профессиональное снаряжение, поддерживаем постоянную связь с базовым лагерем и имеем комплексные протоколы на случай ЧП. Погодные условия отслеживаются непрерывно.",
+        "Да! В зоопарке есть специальные зоны ручного кормления, где под наблюдением смотрителей вы можете покормить оленей, лам, кроликов и некоторых птиц. Кормления крупных хищников и экзотических животных проходят по расписанию — это увлекательное шоу для всей семьи.",
     },
     {
-      question: "Как забронировать место?",
+      question: "Есть ли льготы для детей и пенсионеров?",
       answer:
-        "Группы ограничены 10 участниками, экспедиции проводятся только в сухой сезон (февраль-август). Бронируйте за 6-12 месяцев через наш сайт. Предоплата 50% закрепляет ваше место, полная оплата — за 30 дней до выезда.",
+        "Дети до 3 лет — бесплатно. Для детей от 3 до 12 лет, пенсионеров и людей с ограниченными возможностями действует скидка 50%. Семейный билет (2 взрослых + 2 ребёнка) позволяет сэкономить до 30% по сравнению с покупкой отдельных билетов.",
     },
   ]
 
@@ -45,7 +46,7 @@ const Index = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(https://www.elledecoration.vn/wp-content/uploads/2025/03/1-son-doong.jpg)",
+            backgroundImage: "url(https://cdn.poehali.dev/projects/62412b0c-9059-432b-8ec5-733ea5167f7d/files/9105257b-52b4-4e6e-9aa6-2eb4bf47a983.jpg)",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/80" />
@@ -55,13 +56,13 @@ const Index = () => {
         <nav className="relative z-10 flex items-center justify-between p-6">
           {/* Logo */}
           <div className="flex items-center gap-2 px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full">
-            <Compass className="w-5 h-5" />
-            <span className="font-medium text-balance">Horizon Adventures</span>
+            <Globe className="w-5 h-5" />
+            <span className="font-medium text-balance">Зоопарк Мира</span>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-1">
-            {["Экспедиция", "Безопасность", "Галерея", "Вопросы", "Контакты"].map((item) => (
+            {["Животные", "Маршрут", "Программы", "Вопросы", "Контакты"].map((item) => (
               <a
                 key={item}
                 href="#"
@@ -80,7 +81,7 @@ const Index = () => {
             >
               Войти
             </a>
-            <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6">Забронировать</Button>
+            <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6">Купить билет</Button>
           </div>
         </nav>
 
@@ -88,21 +89,21 @@ const Index = () => {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6 text-center">
           {/* Badge */}
           <div className="mb-6 px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full">
-            <span className="text-sm font-medium">Эксклюзивные групповые экспедиции</span>
+            <span className="text-sm font-medium">Животные с шести континентов</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-6 text-balance">Войдите в затерянный мир.</h1>
+          <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-6 text-balance">Весь мир в одном месте.</h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mb-12 leading-relaxed text-pretty">
-            Исследуйте грандиозные залы пещеры Скрытой Долины в Южной Америке — уникальную экосистему с собственными джунглями и погодой — в рамках 4-дневной экспедиции с гидом.
+            Познакомьтесь с более чем 200 видами животных со всех уголков Земли — от величественных африканских слонов до редких азиатских тигров — в нашем зоопарке мирового уровня.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 py-4 text-lg">
-              Забронировать экспедицию
+              Купить билеты
             </Button>
             <Button
               size="lg"
@@ -115,8 +116,8 @@ const Index = () => {
 
           {/* Footer Note */}
           <div className="flex items-center gap-2 px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full">
-            <Lock className="w-4 h-4" />
-            <span className="text-sm font-medium">Безопасность — наш приоритет</span>
+            <Heart className="w-4 h-4" />
+            <span className="text-sm font-medium">Забота о животных — наш приоритет</span>
           </div>
         </div>
       </div>
@@ -125,40 +126,40 @@ const Index = () => {
       <section className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-            {/* Expert-Led Tours */}
+            {/* 200+ видов */}
             <div className="rounded-2xl bg-black/20 ring-1 ring-white/15 backdrop-blur p-8 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black/30 ring-1 ring-white/20 mb-6">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Туры с экспертами</h3>
-              <p className="text-white/80 leading-relaxed">Ведут геологи, спелеологи и местные специалисты.</p>
+              <h3 className="text-xl font-semibold mb-4">200+ видов животных</h3>
+              <p className="text-white/80 leading-relaxed">Коллекция из шести континентов в одном зоопарке.</p>
             </div>
 
-            {/* World-Class Safety */}
+            {/* Опытные зоологи */}
             <div className="rounded-2xl bg-black/20 ring-1 ring-white/15 backdrop-blur p-8 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black/30 ring-1 ring-white/20 mb-6">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Мировой уровень безопасности</h3>
-              <p className="text-white/80 leading-relaxed">Строгие протоколы и современное снаряжение.</p>
+              <h3 className="text-xl font-semibold mb-4">Забота профессионалов</h3>
+              <p className="text-white/80 leading-relaxed">Ветеринары и зоологи следят за здоровьем каждого животного.</p>
             </div>
 
-            {/* All-Inclusive Package */}
+            {/* Интерактив */}
             <div className="rounded-2xl bg-black/20 ring-1 ring-white/15 backdrop-blur p-8 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black/30 ring-1 ring-white/20 mb-6">
-                <Wallet className="w-6 h-6" />
+                <Camera className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Все включено</h3>
-              <p className="text-white/80 leading-relaxed">Разрешения, снаряжение, питание и трансфер.</p>
+              <h3 className="text-xl font-semibold mb-4">Интерактивные шоу</h3>
+              <p className="text-white/80 leading-relaxed">Кормления, мастер-классы и фотосессии с животными.</p>
             </div>
 
-            {/* Eco-Friendly Caving */}
+            {/* Экология */}
             <div className="rounded-2xl bg-black/20 ring-1 ring-white/15 backdrop-blur p-8 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-black/30 ring-1 ring-white/20 mb-6">
                 <Leaf className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Эко-спелеология</h3>
-              <p className="text-white/80 leading-relaxed">Мы бережно сохраняем экосистему пещеры.</p>
+              <h3 className="text-xl font-semibold mb-4">Охрана природы</h3>
+              <p className="text-white/80 leading-relaxed">Участвуем в программах защиты редких и исчезающих видов.</p>
             </div>
           </div>
         </div>
@@ -170,66 +171,66 @@ const Index = () => {
           <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-12">
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Ваше эпическое путешествие</h2>
+              <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Ваш маршрут по зоопарку</h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto text-pretty">
-                От джунглей до подземных лагерей — вот что вас ждет.
+                От Африки до Арктики — откройте для себя четыре удивительных мира за один день.
               </p>
             </div>
 
             {/* Journey Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              {/* Phase 1: Briefing & Prep */}
+              {/* Zone 1 */}
               <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 h-80 flex flex-col">
                 <div className="flex-1">
                   <div className="text-3xl font-bold text-white/60 mb-4">01.</div>
-                  <h3 className="text-xl font-semibold mb-4">Инструктаж</h3>
+                  <h3 className="text-xl font-semibold mb-4">Африканская саванна</h3>
                   <p className="text-white/80 leading-relaxed text-sm">
-                    Ваше приключение начинается в базовом лагере с полного инструктажа по безопасности и проверки снаряжения.
+                    Слоны, жирафы, зебры и львы в просторных вольерах, воссоздающих настоящую африканскую саванну.
                   </p>
                 </div>
               </div>
 
-              {/* Phase 2: The Trek */}
+              {/* Zone 2 */}
               <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 h-80 flex flex-col">
                 <div className="flex-1">
                   <div className="text-3xl font-bold text-white/60 mb-4">02.</div>
-                  <h3 className="text-xl font-semibold mb-4">Треккинг</h3>
+                  <h3 className="text-xl font-semibold mb-4">Азиатские джунгли</h3>
                   <p className="text-white/80 leading-relaxed text-sm">
-                    Идите через нетронутые джунгли, пересекайте реки и ночуйте в удаленных точках по пути ко входу в Скрытую Долину.
+                    Амурские тигры, бенгальские тигры, панды и орангутаны в тропическом тропическом лесу.
                   </p>
                 </div>
               </div>
 
-              {/* Phase 3: Caving */}
+              {/* Zone 3 */}
               <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 h-80 flex flex-col">
                 <div className="flex-1">
                   <div className="text-3xl font-bold text-white/60 mb-4">03.</div>
-                  <h3 className="text-xl font-semibold mb-4">Спелеология</h3>
+                  <h3 className="text-xl font-semibold mb-4">Тропики Америки</h3>
                   <p className="text-white/80 leading-relaxed text-sm">
-                    Спуститесь в пещеру, чтобы увидеть гигантские сталагмиты, исследовать огромные залы и уникальные подземные джунгли.
+                    Ягуары, ленивцы, тапиры и яркие попугаи ара среди буйной зелени амазонских тропиков.
                   </p>
                 </div>
               </div>
 
-              {/* Phase 4: Base Camp */}
+              {/* Zone 4 */}
               <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 h-80 flex flex-col">
                 <div className="flex-1">
                   <div className="text-3xl font-bold text-white/60 mb-4">04.</div>
-                  <h3 className="text-xl font-semibold mb-4">Базовый лагерь</h3>
+                  <h3 className="text-xl font-semibold mb-4">Арктика и Австралия</h3>
                   <p className="text-white/80 leading-relaxed text-sm">
-                    Проведите ночи на потрясающих стоянках внутри пещеры, делясь историями с группой перед обратным путем.
+                    Белые медведи и пингвины соседствуют с кенгуру, коалами и экзотическими сумчатыми.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Check Availability Button */}
+            {/* Button */}
             <div className="text-center">
               <Button
                 size="lg"
                 className="bg-white text-black hover:bg-white/90 rounded-full px-12 py-4 text-lg font-semibold"
               >
-                Проверить наличие мест
+                Купить билеты
               </Button>
             </div>
           </div>
@@ -241,13 +242,13 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              {/* Left Column - Title and Description */}
+              {/* Left Column */}
               <div>
                 <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">
                   Частые вопросы
                 </h2>
                 <p className="text-xl text-white/80 leading-relaxed text-pretty">
-                  Все, что нужно знать об экспедиции: от физических требований до бронирования места в этом эксклюзивном приключении.
+                  Всё, что нужно знать перед визитом: от животных и расписания кормлений до цен на билеты.
                 </p>
               </div>
 
@@ -326,7 +327,7 @@ const Index = () => {
                       id="message"
                       rows={5}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                      placeholder="Расскажите о ваших интересах в экспедиции..."
+                      placeholder="Задайте вопрос или закажите экскурсию..."
                     />
                   </div>
                   <Button className="w-full bg-black text-white hover:bg-gray-800 rounded-lg py-3 font-normal text-base">
@@ -339,21 +340,19 @@ const Index = () => {
               <div className="space-y-8">
                 <div>
                   <p className="text-xl text-white/90 leading-relaxed text-pretty">
-                    По вопросам индивидуальных туров, партнерства или для СМИ — свяжитесь с нами. Мы отвечаем в течение одного рабочего дня.
+                    По вопросам групповых экскурсий, образовательных программ или корпоративных визитов — напишите нам. Отвечаем в течение одного рабочего дня.
                   </p>
                 </div>
 
                 {/* Profile Card */}
                 <div className="rounded-2xl bg-white/95 text-black p-6 shadow-2xl">
                   <div className="flex items-center gap-4 mb-4">
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-                      alt="Маркус Уильямс"
-                      className="w-16 h-16 rounded-full object-cover"
-                    />
+                    <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center text-3xl">
+                      🦁
+                    </div>
                     <div>
-                      <h4 className="text-lg font-semibold">Маркус Уильямс</h4>
-                      <p className="text-gray-600">Руководитель экспедиций</p>
+                      <h4 className="text-lg font-semibold">Команда зоопарка</h4>
+                      <p className="text-gray-600">Отдел по работе с посетителями</p>
                     </div>
                   </div>
                   <Button className="w-full bg-black text-white hover:bg-gray-800 rounded-lg flex items-center justify-center gap-2">
@@ -376,19 +375,19 @@ const Index = () => {
               {/* Brand Section */}
               <div className="lg:col-span-2">
                 <div className="flex items-center gap-2 mb-6">
-                  <Compass className="w-6 h-6" />
-                  <span className="text-xl font-semibold">Horizon Adventures</span>
+                  <Globe className="w-6 h-6" />
+                  <span className="text-xl font-semibold">Зоопарк Мира</span>
                 </div>
                 <p className="text-white/80 leading-relaxed text-pretty">
-                  Официальный туроператор экспедиций в Скрытую Долину — крупнейшую пещеру мира. Мы преданы безопасности, охране природы и незабываемым приключениям.
+                  Зоопарк мирового уровня с животными с шести континентов. Мы преданы заботе о животных, охране редких видов и незабываемым впечатлениям для всей семьи.
                 </p>
               </div>
 
-              {/* Expedition Links */}
+              {/* Zoo Links */}
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-wider mb-6">ЭКСПЕДИЦИЯ</h3>
+                <h3 className="text-sm font-bold uppercase tracking-wider mb-6">ЗООПАРК</h3>
                 <ul className="space-y-3">
-                  {["Маршрут", "Цены", "Список снаряжения", "Фотогалерея"].map((item) => (
+                  {["Животные", "Расписание", "Маршрут", "Фотогалерея"].map((item) => (
                     <li key={item}>
                       <a href="#" className="text-white/70 hover:text-white transition-colors text-sm leading-relaxed">
                         {item}
@@ -402,7 +401,7 @@ const Index = () => {
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider mb-6">О НАС</h3>
                 <ul className="space-y-3">
-                  {["Наша миссия", "Стандарты безопасности", "Команда", "Охрана природы"].map((item) => (
+                  {["Наша миссия", "Команда", "Охрана природы", "Партнёры"].map((item) => (
                     <li key={item}>
                       <a href="#" className="text-white/70 hover:text-white transition-colors text-sm leading-relaxed">
                         {item}
@@ -412,11 +411,11 @@ const Index = () => {
                 </ul>
               </div>
 
-              {/* Resources Links */}
+              {/* Support Links */}
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider mb-6">ПОДДЕРЖКА</h3>
                 <ul className="space-y-3">
-                  {["Справочный центр", "Контакты", "Вопросы и ответы", "Условия"].map((item) => (
+                  {["Купить билеты", "Контакты", "Вопросы и ответы", "Условия"].map((item) => (
                     <li key={item}>
                       <a href="#" className="text-white/70 hover:text-white transition-colors text-sm leading-relaxed">
                         {item}
@@ -430,7 +429,7 @@ const Index = () => {
             {/* Newsletter Section */}
             <div className="border-t border-white/10 pt-12 mb-12">
               <div className="max-w-md">
-                <h3 className="text-lg font-semibold mb-4">Новости экспедиций</h3>
+                <h3 className="text-lg font-semibold mb-4">Новости зоопарка</h3>
                 <div className="flex gap-3">
                   <input
                     type="email"
@@ -444,7 +443,7 @@ const Index = () => {
 
             {/* Sub-footer */}
             <div className="border-t border-white/10 pt-8">
-              <p className="text-white/60 text-sm text-center">© 2025 Horizon Adventures</p>
+              <p className="text-white/60 text-sm text-center">© 2025 Зоопарк Мира</p>
             </div>
           </div>
         </div>
