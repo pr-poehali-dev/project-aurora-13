@@ -57,7 +57,7 @@ const Index = () => {
           {/* Logo */}
           <div className="flex items-center gap-2 px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full">
             <Globe className="w-5 h-5" />
-            <span className="font-medium text-balance">Зоопарк Мира</span>
+            <span className="font-medium text-balance">WildZoo</span>
           </div>
 
           {/* Navigation Links */}
@@ -470,7 +470,7 @@ const Index = () => {
               <div className="lg:col-span-2">
                 <div className="flex items-center gap-2 mb-6">
                   <Globe className="w-6 h-6" />
-                  <span className="text-xl font-semibold">Зоопарк Мира</span>
+                  <span className="text-xl font-semibold">WildZoo</span>
                 </div>
                 <p className="text-white/80 leading-relaxed text-pretty">
                   Зоопарк мирового уровня с животными с шести континентов. Мы преданы заботе о животных, охране редких видов и незабываемым впечатлениям для всей семьи.
@@ -537,7 +537,7 @@ const Index = () => {
 
             {/* Sub-footer */}
             <div className="border-t border-white/10 pt-8">
-              <p className="text-white/60 text-sm text-center">© 2025 Зоопарк Мира</p>
+              <p className="text-white/60 text-sm text-center">© 2025 WildZoo</p>
             </div>
           </div>
         </div>
