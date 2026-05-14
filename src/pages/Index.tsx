@@ -237,6 +237,100 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Animals Section */}
+      <section className="relative z-10 py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Виды животных</h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto text-pretty">
+              Более 200 видов со всего света — каждый со своей историей, средой обитания и характером.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Africa */}
+            <div className="rounded-3xl overflow-hidden relative h-80 group cursor-pointer">
+              <img
+                src="https://cdn.poehali.dev/projects/62412b0c-9059-432b-8ec5-733ea5167f7d/files/c31ac250-bb6d-425c-a450-3c180960c97b.jpg"
+                alt="Животные Африки"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-2">Зона 01</div>
+                <h3 className="text-2xl font-bold mb-2">Африканская савана</h3>
+                <p className="text-white/80 text-sm leading-relaxed">Слоны, львы, зебры, жирафы — властелины бескрайних равнин.</p>
+                <div className="mt-4 flex gap-2 flex-wrap">
+                  {["Лев", "Слон", "Жираф", "Зебра", "Носорог"].map((a) => (
+                    <span key={a} className="px-3 py-1 rounded-full bg-white/15 text-xs font-medium backdrop-blur">{a}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Asia */}
+            <div className="rounded-3xl overflow-hidden relative h-80 group cursor-pointer">
+              <img
+                src="https://cdn.poehali.dev/projects/62412b0c-9059-432b-8ec5-733ea5167f7d/files/087d5074-4421-40db-ae18-3a0ef7721519.jpg"
+                alt="Животные Азии"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-2">Зона 02</div>
+                <h3 className="text-2xl font-bold mb-2">Джунгли Азии</h3>
+                <p className="text-white/80 text-sm leading-relaxed">Тигры, панды и снежные барсы в дремучих лесах Востока.</p>
+                <div className="mt-4 flex gap-2 flex-wrap">
+                  {["Тигр", "Панда", "Снежный барс", "Орангутан"].map((a) => (
+                    <span key={a} className="px-3 py-1 rounded-full bg-white/15 text-xs font-medium backdrop-blur">{a}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Americas */}
+            <div className="rounded-3xl overflow-hidden relative h-80 group cursor-pointer">
+              <img
+                src="https://cdn.poehali.dev/projects/62412b0c-9059-432b-8ec5-733ea5167f7d/files/dc00dd11-f3b5-4a06-b83d-812aa6cfcc08.jpg"
+                alt="Животные Америки"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-2">Зона 03</div>
+                <h3 className="text-2xl font-bold mb-2">Тропики Америки</h3>
+                <p className="text-white/80 text-sm leading-relaxed">Ягуары, ленивцы и попугаи ара в сердце Амазонии.</p>
+                <div className="mt-4 flex gap-2 flex-wrap">
+                  {["Ягуар", "Ленивец", "Тукан", "Ара", "Анаконда"].map((a) => (
+                    <span key={a} className="px-3 py-1 rounded-full bg-white/15 text-xs font-medium backdrop-blur">{a}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Arctic & Australia */}
+            <div className="rounded-3xl overflow-hidden relative h-80 group cursor-pointer">
+              <img
+                src="https://cdn.poehali.dev/projects/62412b0c-9059-432b-8ec5-733ea5167f7d/files/92df7803-ed09-4a60-854c-84363699afac.jpg"
+                alt="Арктика и Австралия"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-2">Зона 04</div>
+                <h3 className="text-2xl font-bold mb-2">Арктика и Австралия</h3>
+                <p className="text-white/80 text-sm leading-relaxed">От белых медведей на льдинах до кенгуру и коал.</p>
+                <div className="mt-4 flex gap-2 flex-wrap">
+                  {["Белый медведь", "Пингвин", "Кенгуру", "Коала"].map((a) => (
+                    <span key={a} className="px-3 py-1 rounded-full bg-white/15 text-xs font-medium backdrop-blur">{a}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
