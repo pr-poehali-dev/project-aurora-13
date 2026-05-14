@@ -87,6 +87,9 @@ const Index = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-6 text-center">
+          {/* Brand */}
+          <div className="mb-4 text-6xl md:text-7xl font-bold tracking-tight">WildZoo</div>
+
           {/* Badge */}
           <div className="mb-6 px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full">
             <span className="text-sm font-medium">Животные с шести континентов</span>
