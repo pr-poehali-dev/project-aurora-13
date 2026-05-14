@@ -334,6 +334,83 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Tickets Section */}
+      <section className="relative z-10 py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Билеты и цены</h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto text-pretty">
+              Выберите подходящий вариант — одиночный, детский или семейный.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Детский */}
+            <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 flex flex-col">
+              <div className="mb-6">
+                <div className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-3">Детский</div>
+                <div className="text-5xl font-bold mb-1">350 ₽</div>
+                <div className="text-white/60 text-sm">от 3 до 12 лет</div>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {["Вход на всю территорию", "Интерактивные зоны", "Мини-кормление животных"].map((f) => (
+                  <li key={f} className="flex items-center gap-3 text-white/80 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/50 flex-shrink-0" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <Button variant="outline" className="w-full rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10">
+                Купить билет
+              </Button>
+            </div>
+
+            {/* Взрослый — выделен */}
+            <div className="rounded-3xl bg-white text-black p-8 flex flex-col relative">
+              <div className="absolute top-6 right-6 px-3 py-1 rounded-full bg-black text-white text-xs font-semibold">Популярный</div>
+              <div className="mb-6">
+                <div className="text-xs font-semibold uppercase tracking-widest text-black/50 mb-3">Взрослый</div>
+                <div className="text-5xl font-bold mb-1">700 ₽</div>
+                <div className="text-black/60 text-sm">от 12 лет</div>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {["Вход на всю территорию", "Шоу кормления хищников", "Аудиогид по зонам", "Фотозона с животными"].map((f) => (
+                  <li key={f} className="flex items-center gap-3 text-black/80 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-black/50 flex-shrink-0" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <Button className="w-full rounded-full bg-black text-white hover:bg-black/80">
+                Купить билет
+              </Button>
+            </div>
+
+            {/* Семейный */}
+            <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8 flex flex-col">
+              <div className="mb-6">
+                <div className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-3">Семейный</div>
+                <div className="text-5xl font-bold mb-1">1 800 ₽</div>
+                <div className="text-white/60 text-sm">2 взрослых + 2 ребёнка</div>
+              </div>
+              <ul className="space-y-3 mb-8 flex-1">
+                {["Вход на всю территорию", "Все шоу и кормления", "Аудиогид по зонам", "Фотозона с животными", "Скидка 30% vs отдельных"].map((f) => (
+                  <li key={f} className="flex items-center gap-3 text-white/80 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/50 flex-shrink-0" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <Button variant="outline" className="w-full rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10">
+                Купить билет
+              </Button>
+            </div>
+          </div>
+
+          <p className="text-center text-white/40 text-sm mt-8">Дети до 3 лет — бесплатно. Пенсионеры и льготники — скидка 50%.</p>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
