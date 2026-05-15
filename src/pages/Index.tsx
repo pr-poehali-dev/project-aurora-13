@@ -415,6 +415,66 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Schedule Section */}
+      <section className="relative z-10 py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Рабочий график</h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto text-pretty">
+              Зоопарк открыт круглый год — приходите в любое время года.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Hours table */}
+            <div className="lg:col-span-2 rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-8">
+              <div className="text-lg font-semibold mb-6">Часы работы</div>
+              <div className="divide-y divide-white/10">
+                {[
+                  { day: "Понедельник", time: "10:00 — 19:00", note: "" },
+                  { day: "Вторник", time: "10:00 — 19:00", note: "" },
+                  { day: "Среда", time: "10:00 — 19:00", note: "" },
+                  { day: "Четверг", time: "10:00 — 19:00", note: "" },
+                  { day: "Пятница", time: "10:00 — 20:00", note: "Продлённый день" },
+                  { day: "Суббота", time: "09:00 — 21:00", note: "Выходной день" },
+                  { day: "Воскресенье", time: "09:00 — 21:00", note: "Выходной день" },
+                ].map(({ day, time, note }) => (
+                  <div key={day} className="flex items-center justify-between py-4">
+                    <span className="text-white/80">{day}</span>
+                    <div className="text-right">
+                      <span className="font-semibold">{time}</span>
+                      {note && <div className="text-xs text-white/40 mt-0.5">{note}</div>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Info cards */}
+            <div className="flex flex-col gap-4">
+              <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-7 flex-1">
+                <div className="text-3xl mb-4">🎪</div>
+                <div className="font-semibold text-lg mb-2">Кормление животных</div>
+                <div className="text-white/60 text-sm leading-relaxed space-y-1">
+                  <div>🦁 Хищники — 12:00 и 17:00</div>
+                  <div>🐧 Пингвины — 11:00 и 15:00</div>
+                  <div>🦒 Травоядные — 13:00</div>
+                  <div>🐠 Обитатели воды — 14:00</div>
+                </div>
+              </div>
+
+              <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-7 flex-1">
+                <div className="text-3xl mb-4">📅</div>
+                <div className="font-semibold text-lg mb-2">Особые дни</div>
+                <div className="text-white/60 text-sm leading-relaxed">
+                  В праздничные дни зоопарк работает по расписанию выходного дня. Касса закрывается за 1 час до закрытия.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tickets Section */}
       <section className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
