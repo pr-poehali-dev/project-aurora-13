@@ -411,6 +411,37 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Rules Section */}
+      <section className="relative z-10 py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Правила зоопарка</h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto text-pretty">
+              Соблюдение правил — залог безопасности гостей и комфорта животных.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { emoji: "🚫", title: "Не кормить самостоятельно", text: "Кормить животных можно только в специально отведённых зонах и с разрешения сотрудников." },
+              { emoji: "🤫", title: "Тишина у вольеров", text: "Громкие звуки и резкие движения пугают животных. Просим вести себя спокойно." },
+              { emoji: "🐾", title: "Не заходить за ограждения", text: "Пересекать ограждения и барьеры категорически запрещено — это опасно для жизни." },
+              { emoji: "🐕", title: "Домашние животные", text: "Вход с домашними питомцами запрещён на всей территории зоопарка." },
+              { emoji: "📸", title: "Фотосъёмка", text: "Фотографировать можно везде. Вспышка запрещена — она стрессовая для животных." },
+              { emoji: "🗑️", title: "Чистота", text: "Пожалуйста, пользуйтесь урнами и не оставляйте мусор на территории." },
+            ].map(({ emoji, title, text }) => (
+              <div key={title} className="flex gap-5 rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-6">
+                <div className="text-3xl flex-shrink-0 mt-0.5">{emoji}</div>
+                <div>
+                  <div className="font-semibold text-lg mb-1">{title}</div>
+                  <div className="text-white/60 text-sm leading-relaxed">{text}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
