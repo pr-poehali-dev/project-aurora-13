@@ -240,6 +240,87 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="relative z-10 py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Схема зоопарка</h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto text-pretty">
+              Ориентируйтесь по зонам — каждая со своим характером и жителями.
+            </p>
+          </div>
+
+          <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur overflow-hidden">
+            {/* Map grid */}
+            <div className="grid grid-cols-3 grid-rows-3 gap-px bg-white/10 aspect-[4/3]">
+              {/* Африканская саванна */}
+              <div className="bg-amber-900/40 hover:bg-amber-800/50 transition-colors p-5 flex flex-col justify-between col-span-2">
+                <span className="text-2xl">🦁</span>
+                <div>
+                  <div className="font-bold text-base">Африканская саванна</div>
+                  <div className="text-white/50 text-xs mt-0.5">Зона А · Вход</div>
+                </div>
+              </div>
+
+              {/* Птичий двор */}
+              <div className="bg-sky-900/40 hover:bg-sky-800/50 transition-colors p-5 flex flex-col justify-between row-span-2">
+                <span className="text-2xl">🦜</span>
+                <div>
+                  <div className="font-bold text-base">Птичий двор</div>
+                  <div className="text-white/50 text-xs mt-0.5">Зона Б</div>
+                </div>
+              </div>
+
+              {/* Азиатские джунгли */}
+              <div className="bg-green-900/40 hover:bg-green-800/50 transition-colors p-5 flex flex-col justify-between">
+                <span className="text-2xl">🐯</span>
+                <div>
+                  <div className="font-bold text-base">Азиатские джунгли</div>
+                  <div className="text-white/50 text-xs mt-0.5">Зона В</div>
+                </div>
+              </div>
+
+              {/* Арктика */}
+              <div className="bg-blue-900/40 hover:bg-blue-800/50 transition-colors p-5 flex flex-col justify-between">
+                <span className="text-2xl">🐧</span>
+                <div>
+                  <div className="font-bold text-base">Арктика</div>
+                  <div className="text-white/50 text-xs mt-0.5">Зона Г</div>
+                </div>
+              </div>
+
+              {/* Американские тропики */}
+              <div className="bg-emerald-900/40 hover:bg-emerald-800/50 transition-colors p-5 flex flex-col justify-between col-span-2">
+                <span className="text-2xl">🐊</span>
+                <div>
+                  <div className="font-bold text-base">Американские тропики</div>
+                  <div className="text-white/50 text-xs mt-0.5">Зона Д</div>
+                </div>
+              </div>
+
+              {/* Кафе */}
+              <div className="bg-orange-900/40 hover:bg-orange-800/50 transition-colors p-5 flex flex-col justify-between">
+                <span className="text-2xl">☕</span>
+                <div>
+                  <div className="font-bold text-base">Кафе & Сувениры</div>
+                  <div className="text-white/50 text-xs mt-0.5">Центр</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Legend */}
+            <div className="p-6 flex flex-wrap gap-4 text-sm text-white/60">
+              <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-amber-700/60 inline-block" />Саванна</span>
+              <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-green-800/60 inline-block" />Джунгли</span>
+              <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-blue-800/60 inline-block" />Арктика</span>
+              <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-emerald-800/60 inline-block" />Тропики</span>
+              <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-sky-800/60 inline-block" />Птицы</span>
+              <span className="flex items-center gap-2"><span className="w-3 h-3 rounded-sm bg-orange-800/60 inline-block" />Инфраструктура</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Animals Section */}
       <section className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
